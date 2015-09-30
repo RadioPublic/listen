@@ -1,0 +1,204 @@
+* {
+  margin: 0;
+  border: 0;
+  padding: 0;
+}
+
+body {
+  color: white;
+  background-color: black;
+  background-image: url('grad.png');
+  background-position: top left, left bottom;
+  background-repeat: repeat, repeat-x;
+  background-size: 100%, auto;
+  width: 100vw;
+  height: 100vh;
+  -webkit-user-select: none;
+  position: relative;
+  font-family: 'Open Sans', sans-serif;
+}
+
+#loading {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 100;
+  visibility: hidden;
+  opacity: 0;
+  transition: visibility 0s linear 0.5s, opacity 0.5s linear;
+}
+
+.isLoading #loading {
+  visibility: visible;
+  opacity: 1;
+  transition-delay: 0s;
+}
+
+main {
+  display: flex;
+  display: -webkit-flex;
+  width: 100%;
+  height: 100%;
+  flex-direction: column;
+  -webkit-flex-direction: column;
+  justify-content: center;
+  -webkit-justify-content: center;
+  align-items: center;
+  -webkit-align-items: center;
+  position: relative
+}
+
+h1 {
+  text-align: center;
+  text-indent: 100%;
+  white-space: nowrap;
+  overflow: hidden;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center center;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  margin: 75px auto 0;
+  height: 125px;
+  max-width: 60%;
+  cursor: pointer;
+}
+
+h2 {
+  text-transform: uppercase;
+  font-weight: 400;
+  font-size: 16px;
+}
+
+h3,
+h4 {
+  font-weight: 400;
+  -webkit-user-select: text;
+  max-width: 75%;
+  text-align: center;
+}
+
+h3 {
+  font-size: 28px;
+  padding: 25px 0;
+}
+
+#controls {
+  padding: 25px 0 0;
+}
+
+#skip,
+#playpause {
+  cursor: pointer;
+  font-size: 72px;
+  margin: 0 6px;
+  z-index: 50;
+  text-align: center;
+}
+
+#playpause {
+  width: 1em;
+}
+
+#outbound {
+  opacity: 0.33;
+  padding: 10px 0 0;
+}
+
+#outbound a {
+  text-decoration: none;
+  color: inherit;
+  display: inline-block;
+  padding: 0 6px;
+  font-size: 12px;
+  cursor: pointer;
+}
+
+#speed {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  padding: 12px 16px;
+  cursor: pointer;
+  opacity: 0.0;
+  z-index: 20;
+}
+
+#progress {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 2px;
+  width: 0;
+  background: rgba(255, 255, 255, 0.667);
+}
+
+#twitter {
+  position: absolute;
+  right: 0;
+  top: 0;
+  padding: 12px 16px;
+  cursor: pointer;
+  opacity: 0.9;
+  z-index: 20;
+  font-size: 36px;
+}
+
+audio {
+  position: absolute;
+  visibility: hidden;
+  width: 0;
+  height: 0;
+  top: 0;
+  left: 0;
+}
+
+@media only screen and (max-width: 450px) {
+  #outbound { display: none; }
+}
+
+@media only screen and (max-width: 320px) {
+  #twitter { display: none; }
+}
+
+@media only screen and (max-height: 736px) {
+  h1 { height: 100px; margin-top: 60px; }
+}
+
+@media only screen and (max-height: 600px) {
+  h2 { display: none; }
+}
+
+@media only screen and (max-height: 550px) {
+  h1 { height: 80px; margin-top: 50px }
+  h3 { padding: 5px 0; font-size: 24px; }
+}
+
+@media only screen and (max-height: 500px) {
+  h1 { height: 70px; margin-top: 30px }
+}
+
+@media only screen and (max-height: 450px) {
+  h3 { font-size: 18px; }
+  h4 { font-size: 13px; }
+  #controls { padding: 5px 0; }
+  #playpause, #skip { font-size: 48px; }
+}
+
+@media only screen and (max-height: 330px) {
+  h1 { opacity: 0.3 }
+}
+
+@media only screen and (max-height: 230px) {
+  #twitter { display: none; }
+}
+
+@media only screen and (max-height: 150px),
+only screen and (max-width: 150px) {
+  h3, h4, #skip, #speed { display: none; }
+}

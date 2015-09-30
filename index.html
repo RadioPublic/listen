@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+
+    <meta name="viewport" content="initial-scale = 1.0,maximum-scale = 1.0" />
+
+    <link href="/main.css" rel="stylesheet">
+    <link href="//fonts.googleapis.com/css?family=Open+Sans:400,600,700,300" rel="stylesheet">
+    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet">
+
+    <link rel="icon" type="image/png" href="/favicon.png">
+
+    <title>RadioPublic, Listen</title>
+
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+    <script src='/jquery.hotkeys.js'></script>
+  </head>
+
+  <body class="isLoading">
+    <main>
+      <h2>Now playing</h2>
+      <h3>&nbsp;</h1>
+      <h4>&nbsp;</h2>
+
+      <div id="controls">
+        <i class="fa fa-play" id="playpause"></i>
+        <i class="fa fa-step-forward" id="skip"></i>
+      </div>
+
+      <div id="outbound">
+        <a id="outbound-www">Website</a>
+        <a id="outbound-itunes">iTunes</a>
+      </div>
+    </main>
+
+    <footer>
+      <div id="progress"></div>
+      <div id="speed">2x</div>
+    </footer>
+
+    <audio controls id="audio"></audio>
+    <div id="loading"></div>
+
+    <script src="/main.js"></script>
+  </body>
+</html>
